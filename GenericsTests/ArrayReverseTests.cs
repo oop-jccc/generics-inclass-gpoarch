@@ -3,7 +3,7 @@ namespace GenericsTests;
 public class ArrayReverseTests
 {
     // TODO: Convert this method to use generics instead of object
-    private static void ReverseArray(object[] arr)
+    private static void ReverseArray<T>(T[] arr)
     {
         var n = arr.Length;
         for (var i = 0; i < n / 2; i++)
@@ -17,7 +17,7 @@ public class ArrayReverseTests
     public void Test_Reverse_Object_Array()
     {
         // TODO: Change this object array to an integer array
-        object[] arr =
+        int[] arr =
         {
             1, 2, 3, 4
         };
@@ -25,7 +25,7 @@ public class ArrayReverseTests
         ReverseArray(arr);
 
         // TODO: Change this object array to an integer array for the expected result
-        object[] expected =
+        int[] expected =
         {
             4, 3, 2, 1
         };
